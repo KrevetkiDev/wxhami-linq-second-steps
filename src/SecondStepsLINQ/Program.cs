@@ -63,5 +63,23 @@ void TaskThree()
             }
         }
     }
-    
+}
+
+void TaskFour()
+{
+    List<int> listForSort = new List<int>() { 1, 3, 5, 10 };
+
+    var sortedList = listForSort.Select(num => num.ToString());
+
+    List<string> GetArrayString(List<int> numbers)
+    {
+        List<string> newNumbers = new List<string>();
+        foreach (var num in numbers)
+        {
+           string newNum = num.ToString();
+           newNumbers.Add(newNum);
+        }
+
+        return newNumbers;
+    }
 }
