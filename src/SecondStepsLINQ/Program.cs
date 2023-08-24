@@ -41,3 +41,27 @@ void TaskTwo()
         return default;
     }
 }
+
+void TaskThree()
+{
+    List<int> listForSort = new List<int>() { 1, 3, 5, 10 };
+
+    var sortedList = listForSort.OrderBy(number => number);
+    
+     void Sort(List<int> list)
+     {
+        for (int i = 0; i < list.Count - 1; i++)
+        {
+            for (int j = i + 1; j < list.Count; j++)
+            {
+                if (list[i] > list[j])
+                {
+                    var num = list[i];
+                    list[i] = list[j];
+                    list[j] = num;
+                }
+            }
+        }
+    }
+    
+}
